@@ -9,10 +9,10 @@
 			<?php if( have_rows('single_card') ):?>
 				<?php while ( have_rows('single_card') ) : the_row();?>	
 				
-				<div class="cell small-12 medium-6">
+				<div class="single-card cell small-12 medium-6">
 					<div class="grid-x grid-padding-x">
 						
-						<div class="left cell shrink">
+						<div class="left cell small-12 medium-shrink">
 							<?php 
 							$image = get_sub_field('icon');
 							if( !empty( $image ) ): ?>
@@ -20,7 +20,7 @@
 							<?php endif; ?>				
 						</div>
 						
-						<div class="right cell auto">
+						<div class="right cell small-12 medium-auto">
 							<h3 class="small-caps"><?php the_sub_field('heading');?></h3>
 							<p><?php the_sub_field('text');?></p>
 						</div>

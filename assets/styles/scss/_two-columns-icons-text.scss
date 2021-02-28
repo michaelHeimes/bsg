@@ -1,0 +1,23 @@
+.two-columns-icons-text {
+	
+	.single-card {
+		margin-top: 1.55em;
+		margin-bottom: 1.55em;
+		
+		.left {
+			margin-bottom: 1.8em;
+			
+			@include breakpoint(medium) {
+				margin-bottom: 0;
+			}
+			
+		}
+	
+		h3 {
+			margin-bottom: 0.85em;
+		}
+	
+	}
+	
+}
+

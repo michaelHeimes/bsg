@@ -1,0 +1,25 @@
+.quote.module {
+	
+	.mark-wrap {
+		position: relative;
+	
+		.mark {
+			font-size: rem-calc(338);
+			display: inline-block;
+						
+			@include breakpoint(medium) {
+				position: absolute;
+				left: 50%;
+				transform: translateX(-50%);				
+			}
+			
+		}
+	
+	}
+	
+	.author-wrap {
+		font-weight: 600;
+		padding-top: 1.7em;
+	}
+	
+}
