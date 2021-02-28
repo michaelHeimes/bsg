@@ -1,15 +1,48 @@
 .recent-press {
+	padding-top: 5.8em;
 	
-	ul.slick-dots {
-		position: relative;
-		display: flex;
-	    justify-content: center;
-	    margin: 0;
-	    padding: 0;
-	    list-style: none;
+	.emb-wrap {
+		padding-right: .25rem;
+		margin-top: -9px;
+	}
 	
-		li {
-			margin: 0 1em;
+	.press-wrap {
+		padding-top: 2em;
+		padding-bottom: 2.25em;
+		
+		.press_post {
+			padding-top: 1.5em;
+			padding-bottom: 1.5em;
+			
+			@include breakpoint(medium) {
+				padding-top: 2.75em;
+				padding-bottom: 2.75em;				
+			}
+			
+			.meta {
+				font-size: rem-calc(15);
+				font-weight: 500;
+				padding-bottom: 1.5em;
+			}
+			
+			h2 {
+				line-height: 1.475;
+			}
+			
+		}
+		
+		ul.slick-dots {
+			position: relative;
+			display: flex;
+		    justify-content: center;
+		    margin: 0;
+		    padding: 0;
+		    list-style: none;
+		
+			li {
+				margin: 0 1em;
+			}
+			
 		}
 		
 	}

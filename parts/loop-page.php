@@ -82,7 +82,7 @@
 				
 				<div class="bottom">
 					<div class="grid-container">
-						<div class="grid-x grid-padding-x">	
+						<div class="inner grid-x grid-padding-x">	
 					
 							<div class="left cell small-12 medium-6">
 							

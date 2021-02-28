@@ -4,10 +4,13 @@
 		position: relative;
 		
 		.card-wrap {
-			position: absolute;
-			left: 0;
-			right: 0;
-			bottom: 0;
+			
+			@include breakpoint(tablet) {
+				position: absolute;
+				left: 0;
+				right: 0;
+				bottom: 0;				
+			}
 			
 			.inner,
 			.squares-wrap {
@@ -18,7 +21,11 @@
 			.inner {
 				background-color: $white;
 				text-align: left;
-				padding: 3.4em 3.8em 0.05em;
+				padding-top: 2.5em;
+				
+				@include breakpoint(medium) {
+					padding: 3.4em 3.8em 0.05em;
+				}
 				
 				
 			&:before {
@@ -42,8 +49,8 @@
 				
 				img {
 					position: absolute;
-				    bottom: -19px;
-				    right: -50px;
+					bottom: -19px;
+					right: -50px;					
 				}
 				
 			}
@@ -53,26 +60,57 @@
 	}
 	
 	.partners-wrap {
-		padding-top: 7.6em;
-		padding-bottom: 5.6em;
+		padding-top: 1.6em;
+		padding-bottom: 1.6em;
+		
+		@include breakpoint(medium) {
+			padding-top: 3.6em;
+			padding-bottom: 2.6em;
+		}
+
+		@include breakpoint(large) {
+			padding-top: 7.6em;
+			padding-bottom: 5.6em;
+		}
 		
 		img {
 			margin-top: 10px;
 			max-width: 156px;
+			margin-bottom: 2em;
+			
+			@include breakpoint(medium) {
+				margin-bottom: 0;
+			}
+			
 		}
 		
-		.inner {
-			max-width: 380px;
-			margin: auto;
+		.right {
+		
+			.col {
+				margin-bottom: 2em;
+		
+				.inner {
+					@include breakpoint(tablet) {
+						max-width: 380px;
+						margin: auto;
+					}
+					
+					.pipe {
+						margin-bottom: 1.2em;
+						
+						@include breakpoint(medium) {
+							margin-bottom: .75em;
+						}
+					}
+					
+					h3 {
+						margin-bottom: .42em;
+					}
+					
+				}
 			
-			.pipe {
-				margin-bottom: .75em;
 			}
-			
-			h3 {
-				margin-bottom: .42em;
-			}
-			
+		
 		}
 		
 	}

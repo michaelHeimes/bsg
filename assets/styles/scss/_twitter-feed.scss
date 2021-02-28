@@ -1,4 +1,12 @@
 .twitter-feed {
-	padding-top: 7.15em;
-	padding-bottom: 7.8em;
+	
+	.left {
+		margin-bottom: 3em;
+		
+		@include breakpoint(medium) {
+			margin-bottom: 0;
+		}
+		
+	}
+	
 }

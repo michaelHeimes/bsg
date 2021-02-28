@@ -8,13 +8,26 @@
  */			
  ?>
 					
-				<footer class="footer" role="contentinfo">
+				<footer class="footer dark-green-bg" role="contentinfo">
 					<div class="grid-container">
 					
-						<div class="inner-footer grid-x grid-padding-x">
+						<div class="inner-footer grid-x grid-padding-x align-justify">
 							
-							<div class="left cell small-12 medium-4 tablet-6">
-								<div><a href="<?php echo home_url(); ?>">
+							<div class="logo-wrap mobile hide-for-tablet cell"><a href="<?php echo home_url(); ?>">
+								
+								<?php 
+								$image = get_field('footer_logo', 'option');
+								if( !empty( $image ) ): ?>
+								    <img src="<?php echo esc_url($image['url']); ?>" alt="<?php echo esc_attr($image['alt']); ?>" />
+								<?php endif; ?>
+																	
+								<span class="show-for-sr"><?php bloginfo('name'); ?></span></a>
+							
+							</div>
+							
+							<div class="left cell small-12 medium-4 tablet-shrink">
+								
+								<div class="logo-wrap show-for-tablet"><a href="<?php echo home_url(); ?>">
 									
 									<?php 
 									$image = get_field('footer_logo', 'option');
@@ -22,16 +35,18 @@
 									    <img src="<?php echo esc_url($image['url']); ?>" alt="<?php echo esc_attr($image['alt']); ?>" />
 									<?php endif; ?>
 																		
-								<?php bloginfo('name'); ?></a></div>
+									<span class="show-for-sr"><?php bloginfo('name'); ?></span></a>
 								
-								<div class="grid-x grid-padding-x">
-									<div class="cell small-6">
-										<h4>Location</h4>
+								</div>
+								
+								<div class="contact-wrap grid-x grid-padding-x">
+									<div class="cell shrink">
+										<div class="contact-label">Location</div>
 										<div><?php the_field('location', 'option');?></div>
 									</div>
 	
-									<div class="cell small-6">
-										<h4>Contact</h4>
+									<div class="cell shrink">
+										<div class="contact-label">Contact</div>
 										<div><a href="mailto:<?php the_field('phone_number', 'option');?>"><?php the_field('phone_number', 'option');?></a></div>
 										<div><a href="tel:<?php the_field('email', 'option');?>"><?php the_field('email', 'option');?></a></div>
 									</div>
@@ -40,7 +55,13 @@
 							</div>
 	
 	
-							<div class="right cell small-12 medium-8 tablet-6">
+							<div class="right cell small-12 medium-8 tablet-auto" style="max-width:<?php the_field('footer_right_max-width', 'option');?>px">
+								
+								<?php if( $footer_heading = get_field('footer_heading', 'option') ):?>
+									<h2><?php echo $footer_heading;?></h2>
+								<?php endif;?>
+								
+								<div class="footer-pipe"></div>
 								
 								<nav role="navigation">
 		    						<?php joints_footer_links(); ?>
@@ -52,14 +73,16 @@
 							
 							<div class="bottom cell">
 								
-								<div class="grid-x grid-padding-x">
+								<div class="grid-x grid-padding-x align-justify align-middle">
 								
-									<div class="left cell small-12 medium-4 tablet-6">
-										<a href="<?php the_field('twitter_url');?>"><img src="<?php echo get_template_directory_uri(); ?>/assets/images/icon-twitter-footer.svg" alt="Twitter Logo"/></a>
-										<a href="<?php the_field('linkedin_url');?>"><img src="<?php echo get_template_directory_uri(); ?>/assets/images/icon-linkedin-footer.svg" alt="LinkedIn Logo"/></a>
+									<div class="left cell small-12 medium-4 tablet-shrink">
+										<div class="inner">
+											<a href="<?php the_field('twitter_url');?>"><img src="<?php echo get_template_directory_uri(); ?>/assets/images/icon-twitter-footer.svg" alt="Twitter Logo"/></a>
+											<a href="<?php the_field('linkedin_url');?>"><img src="<?php echo get_template_directory_uri(); ?>/assets/images/icon-linkedin-footer.svg" alt="LinkedIn Logo"/></a>
+										</div>
 									</div>
 									
-									<div class="right cell small-12 medium-8 tablet-6">
+									<div class="right cell small-12 medium-8 tablet-shrink" style="max-width:<?php the_field('footer_right_max-width', 'option');?>px">
 										<div class="grid-x grid-padding-x">
 											<?php 
 											$link = get_field('privacy_link', 'option');
@@ -68,11 +91,11 @@
 											    $link_title = $link['title'];
 											    $link_target = $link['target'] ? $link['target'] : '_self';
 											    ?>
-											<div class="cell shrink">
-											    <a href="<?php echo esc_url( $link_url ); ?>" target="<?php echo esc_attr( $link_target ); ?>"><?php echo esc_html( $link_title ); ?></a>
+											<div class="cell small-12 medium-shrink">
+											    <a class="underlined" href="<?php echo esc_url( $link_url ); ?>" target="<?php echo esc_attr( $link_target ); ?>"><?php echo esc_html( $link_title ); ?></a>
 											</div>
 											<?php endif; ?>
-											<div class="source-org copyright cell auto">&copy; Copyright <?php echo date('Y'); ?> <?php bloginfo('name'); ?> | <a href="https://proprdesign.com/" target="_blank">Made by Propr Design</a></div>
+											<div class="source-org copyright cell small-12 medium-auto">&copy; Copyright <?php echo date('Y'); ?> <?php bloginfo('name'); ?> | <a href="https://proprdesign.com/" target="_blank">Made by Propr Design</a></div>
 										</div>
 									</div>
 								

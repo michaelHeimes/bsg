@@ -16,7 +16,7 @@
 						<p><span class="large-green-text"><?php the_sub_field('copy');?></span></p>
 					</div>
 					
-					<div class="squares-wrap cell">
+					<div class="squares-wrap cell show-for-tablet">
 						<img src="<?php echo get_template_directory_uri(); ?>/assets/images/arrow-boxes.svg" alt="arrow boxes"/>
 					</div>					
 					
@@ -33,7 +33,7 @@
 	<div class="grid-container">
 		<div class="partners-wrap grid-x grid-padding-x">
 			
-			<div class="cell small-12 medium-shrink">
+			<div class="left cell small-12 medium-shrink">
 				<?php 
 				$image = get_sub_field('partner_logo');
 				if( !empty( $image ) ): ?>
@@ -41,18 +41,18 @@
 				<?php endif; ?>
 			</div>
 						
-			<div class="cell auto">
+			<div class="right cell auto">
 			
 				<div class="grid-x grid-padding-x">
 					
-					<div class="cell small-12 medium-12 tablet-6">
+					<div class="col cell small-12 medium-12 tablet-6">
 						<div class="inner">
 							<div class="pipe"></div>
 							<?php the_sub_field('column_1');?>
 						</div>
 					</div>
 		
-					<div class="cell small-12 medium-12 tablet-6">
+					<div class="col cell small-12 medium-12 tablet-6">
 						<div class="inner">
 							<div class="pipe"></div>
 							<?php the_sub_field('column_2');?>

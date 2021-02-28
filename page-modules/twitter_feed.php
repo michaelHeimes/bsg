@@ -2,7 +2,7 @@
 	<div class="grid-container">
 		<div class="grid-x grid-padding-x">
 
-			<div class="cell small-12 medium-6 tablet-5">
+			<div class="left cell small-12 medium-6 tablet-5">
 				<div class="handle h2"><span class="back-slash"><?php the_field('tf_handle', 'option');?></span></div>
 				<h2 class="h1"><?php the_field('tf_heading', 'option');?></h2>
 				<p><?php the_field('tf_copy', 'option');?></p>
@@ -17,7 +17,7 @@
 				<?php endif; ?>				
 			</div>
 
-			<div class="cell small-12 medium-6 tablet-6 tablet-offset-1">
+			<div class="right cell small-12 medium-6 tablet-6 tablet-offset-1">
 				Twitter Feed Here
 			</div>
 

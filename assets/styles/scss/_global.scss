@@ -6,6 +6,25 @@ Stylesheet: Global Stylesheet
 /*********************
 COMMON
 *********************/
+.module {
+	padding-top: 4.15em;
+	padding-bottom: 4.8em;
+	
+	@include breakpoint(medium) {
+		padding-top: 7.15em;
+		padding-bottom: 7.8em;		
+	}
+	
+&.no-top-padding {
+	padding-top: 0;
+}
+
+&.no-bottom-padding {
+	padding-bottom: 0;
+}
+	
+}
+
 button,
 .button {
 	cursor: pointer;
@@ -75,8 +94,8 @@ a.lm-link {
 	
 }
 
-.green-bg {
-	background-color: $brand-green;
+.green-bg,
+.dark-green-bg {
 	color: $white;
 	
 	a,
@@ -89,28 +108,54 @@ a.lm-link {
 	
 }
 
+.green-bg {
+	background-color: $brand-green;
+}
+
+.dark-green-bg {
+	background-color: $brand-dark-green;
+}
+
 /*********************
 TYPOGRAPHY
 *********************/
 h1,
 .h1 {
 	span.back-slash:before {
-		width: calc(100% + 40px);
-		top: 25px;
-		left: -20px;
-		right: -20px;
-		height: 37px;
+		width: calc(100% + 24px);
+		top: 16px;
+		left: -12px;
+		right: -12px;
+		height: 18px;
+		
+		@include breakpoint(medium) {
+			width: calc(100% + 40px);
+			top: 25px;
+			left: -20px;
+			right: -20px;
+			height: 37px;			
+		}
+		
 	}
 }
 
 h2,
 .h2 {
 	span.back-slash:before {
-		width: calc(100% + 26px);
-		top: 19px;
-		left: -13px;
-		right: -13px;
-		height: 22px;
+		width: calc(100% + 18px);
+		top: 9px;
+		left: -9px;
+		right: -9px;
+		height: 10px;
+		
+		@include breakpoint(medium) {
+			width: calc(100% + 26px);
+			top: 19px;
+			left: -13px;
+			right: -13px;
+			height: 22px;			
+		}
+		
 	}
 }
 
@@ -540,7 +585,6 @@ FOOTER STYLES
 *********************/
 .footer {
 	clear: both;
-	margin-top: 1em;
 }
 	
 /*********************

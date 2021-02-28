@@ -1,8 +1,8 @@
 <section class="recent-press module green-bg">
 	<div class="grid-container">
 		
-		<div class="grid-x grid-padding-x">
-			<div class="cell shrink">
+		<div class="grid-x grid-padding-x align-middle">
+			<div class="emb-wrap cell shrink">
 				<img src="<?php echo get_template_directory_uri(); ?>/assets/images/press-embelleshment.svg" alt="press embelleshment"/>
 			</div>
 			<div class="cell auto">
@@ -35,7 +35,7 @@
 	                    <?php endif; ?>
 	                    <?php if ($counter % 4 == 0 or $counter == 0): ?>
 	                    <div>
-	                      <div class="grid-x grid-padding-x small-up-1 medium-up-2">
+	                      <div class="press-wrap grid-x grid-padding-x small-up-1 medium-up-2">
 	                    <?php endif; ?>
 	                    
 	                      <?php get_template_part('parts/loop', 'press'); ?>
@@ -52,7 +52,7 @@
 						
 				} else {?>
 				
-					<div class="grid-x grid-padding-x small-up-1 medium-up-2">
+					<div class="press-wrap grid-x grid-padding-x small-up-1 medium-up-2">
 
 					<?php
 						

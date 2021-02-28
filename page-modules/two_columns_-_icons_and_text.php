@@ -1,4 +1,4 @@
-<section class="two-columns-icons-text module">
+<section class="two-columns-icons-text module<?php if(get_sub_field('remove_top_padding')):?> no-top-padding<?php endif;?><?php if(get_sub_field('remove_bottom_padding')):?> no-bottom-padding<?php endif;?>">
 	<div class="grid-container">
 					
 		<?php if( have_rows('cards') ):?>

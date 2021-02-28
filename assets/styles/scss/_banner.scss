@@ -7,6 +7,11 @@ header.article-header {
 	    width: 100%;
 	    display: flex;
 	    align-items: center;
+	    padding-bottom: 100px;
+	    
+	    @include breakpoint(medium) {
+			padding-bottom: 0;
+	    }
 	    
 	    >.grid-container {
 		    width: 100%;
@@ -20,45 +25,69 @@ header.article-header {
 	}
 	
 	.bottom {
-		padding-top: 5.55em;
+		padding-top: 0;
+		padding-bottom: 4em;
 		
-		.right {
+		@include breakpoint(medium) {
+			padding-top: 5.55em;
+			padding-bottom: 0;
+		}
+		
+		.inner {
+			flex-direction: column-reverse;
 			
-			.inner {
-				padding-top: 1.625em;
-				padding-right: 1.625em;
-				text-align: right;
-				position: relative;
-				top: -232px;
+			@include breakpoint(medium) {
+				flex-direction: row;
+			}
+		
+			.right {
 				
-				img.banner-img {
-					max-width: 483px;
-				}
-				
-				img.banner-emb-img {
-					position: absolute;
-					top: 0;
-					right: 0;
-				}
-				
-				.logo-wrap {
-					background-color: $white;
-					width: 212px;
-					height: 212px;
-					position: absolute;
-					bottom: -100px;
-					display: flex;
-					justify-content: center;
-					align-items: center;
+				.inner {
+					padding-top: 1.625em;
+					padding-right: 1.625em;
+					text-align: right;
+					position: relative;
+					margin-top: -69px;
+					margin-bottom: 3em;
 					
-					img {
-						max-width: 156px;
+					@include breakpoint(medium) {
+						margin-top: -232px;
+						margin-bottom: 0;
+					}
+					
+					img.banner-img {
+						
+						@include breakpoint(xlarge) {
+							max-width: 483px;
+						}
+					}
+					
+					img.banner-emb-img {
+						position: absolute;
+						top: 0;
+						right: 0;
+					}
+					
+					.logo-wrap {
+						background-color: $white;
+						width: 212px;
+						height: 212px;
+						position: absolute;
+						bottom: -100px;
+						display: flex;
+						justify-content: center;
+						align-items: center;
+						
+						img {
+							max-width: 156px;
+						}
+						
 					}
 					
 				}
 				
 			}
-			
+		
 		}
 		
 	}
@@ -69,8 +98,11 @@ header.article-header {
 	padding-bottom: 4.1em;
 	
 	.left {
+		margin-bottom: 3em;
 		
-		
+		@include breakpoint(medium) {
+			margin-bottom: 0;
+		}
 		
 	}
 	
@@ -97,7 +129,11 @@ header.article-header {
 								
 				img.banner-img {
 					position: relative;
-					max-width: 483px;
+
+					@include breakpoint(xlarge) {
+						max-width: 483px;
+					}
+					
 				}
 			
 			}

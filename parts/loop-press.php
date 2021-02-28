@@ -11,9 +11,7 @@
 		
 		<div class="meta">
 
-			<a href="<?php the_field('article_link');?>" target="_blank">
-				<span><?php the_field('press_publication_name');?></span>
-			</a>
+			<a class="underlined" href="<?php the_field('article_link');?>" target="_blank"><span><?php the_field('press_publication_name');?></span></a>
 			
 			<span> / </span>
 			

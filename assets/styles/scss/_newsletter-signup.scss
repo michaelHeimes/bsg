@@ -1,0 +1,26 @@
+.newsletter-signup {
+	position: relative;
+	min-height: 623px;
+	display: flex;
+	align-items: flex-end;
+	
+	.bg {
+		position: absolute;
+		top: 0;
+		left: 0;
+		right: 0;
+		bottom: 0;
+		background-position: 50% 50%;
+	}
+	
+	>.grid-container {
+		width: 100%;
+		position: relative;
+	
+		h2 {
+			color: $white;
+		}		
+	
+	}
+	
+}

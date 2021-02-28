@@ -38,7 +38,24 @@
 	</head>
 			
 	<body <?php body_class(); ?>>
-
+		
+		<header class="header banner-style-<?php the_field('banner_style');?>" role="banner" data-sticky data-margin-top="0" data-sticky-on="small">
+			
+			<div class="grid-container fluid">
+				<div class="grid-x grid-padding-x">
+					<div class="cell">
+					
+						 <!-- This navs will be applied to the topbar, above all content 
+							  To see additional nav styles, visit the /parts directory -->
+						 <?php get_template_part( 'parts/nav', 'offcanvas-topbar' ); ?>
+		
+					</div>
+				</div>
+			</div>
+			 	
+		</header> <!-- end .header -->
+		
+		
 		<div class="off-canvas-wrapper">
 			
 			<!-- Load off-canvas container. Feel free to remove if not using. -->			
@@ -46,18 +63,4 @@
 			
 			<div class="off-canvas-content" data-off-canvas-content>
 				
-				<header class="header banner-style-<?php the_field('banner_style');?>" role="banner" data-sticky data-margin-top="0" data-sticky-on="small">
-					
-					<div class="grid-container fluid">
-						<div class="grid-x grid-padding-x">
-							<div class="cell">
-							
-								 <!-- This navs will be applied to the topbar, above all content 
-									  To see additional nav styles, visit the /parts directory -->
-								 <?php get_template_part( 'parts/nav', 'offcanvas-topbar' ); ?>
-				
-							</div>
-						</div>
-					</div>
-					 	
-				</header> <!-- end .header -->
+
