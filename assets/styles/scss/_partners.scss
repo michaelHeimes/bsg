@@ -1,0 +1,80 @@
+.partners-module {
+	
+	.img-wrap {
+		position: relative;
+		
+		.card-wrap {
+			position: absolute;
+			left: 0;
+			right: 0;
+			bottom: 0;
+			
+			.inner,
+			.squares-wrap {
+				position: relative;
+				max-width: 734px;					
+			}
+			
+			.inner {
+				background-color: $white;
+				text-align: left;
+				padding: 3.4em 3.8em 0.05em;
+				
+				
+			&:before {
+				content: '';
+				position: absolute;
+				left: 0;
+				right: 0;
+				width: 100%;
+				height: 4px;
+				bottom: -2px;
+				background-color: $white;
+			}
+								
+				h2 {
+					margin-bottom: 0.34em;
+				}
+				
+			}
+			
+			.squares-wrap {
+				
+				img {
+					position: absolute;
+				    bottom: -19px;
+				    right: -50px;
+				}
+				
+			}
+			
+		}
+		
+	}
+	
+	.partners-wrap {
+		padding-top: 7.6em;
+		padding-bottom: 5.6em;
+		
+		img {
+			margin-top: 10px;
+			max-width: 156px;
+		}
+		
+		.inner {
+			max-width: 380px;
+			margin: auto;
+			
+			.pipe {
+				margin-bottom: .75em;
+			}
+			
+			h3 {
+				margin-bottom: .42em;
+			}
+			
+		}
+		
+	}
+	
+}

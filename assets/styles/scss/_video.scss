@@ -1,0 +1,42 @@
+section.video {
+	position: relative;
+	cursor: pointer;
+		
+	svg {
+		position: absolute;
+		top: 50%;
+		left: 50%;
+		transform: translate(-50%, -50%);
+		transition: all .3s ease;
+		
+		path,
+		g {
+			transition: all .3s ease;
+		}
+		
+	}
+	
+&:hover {
+	svg {
+		stroke: $brand-green;	
+		
+		path {
+			fill: $brand-green;
+		}
+		
+		g {
+			stroke: $brand-green;
+		}
+		
+	}
+}
+	
+}
+
+.video-reveal {
+	button.close-button {
+		color: $brand-green;
+    	font-size: 50px;
+	}
+}
+
