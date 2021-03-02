@@ -7,7 +7,6 @@ header.article-header {
 	    width: 100%;
 	    display: flex;
 	    align-items: center;
-	    padding-bottom: 100px;
 	    
 	    @include breakpoint(medium) {
 			padding-bottom: 0;
@@ -24,9 +23,21 @@ header.article-header {
 		
 	}
 	
+	
+&.style-image-overlap {
+	
+	@include breakpoint(medium) {
+		margin-bottom: 5.2em;
+	}
+	
+	.top {
+		padding-bottom: 100px;
+	}
+	
+	
 	.bottom {
 		padding-top: 0;
-		padding-bottom: 4em;
+		padding-bottom: 2em;
 		
 		@include breakpoint(medium) {
 			padding-top: 5.55em;
@@ -48,42 +59,49 @@ header.article-header {
 					text-align: right;
 					position: relative;
 					margin-top: -69px;
-					margin-bottom: 3em;
+					margin-bottom: 5em;
 					
 					@include breakpoint(medium) {
 						margin-top: -232px;
 						margin-bottom: 0;
 					}
 					
-					img.banner-img {
-						
-						@include breakpoint(xlarge) {
-							max-width: 483px;
-						}
-					}
-					
-					img.banner-emb-img {
-						position: absolute;
-						top: 0;
-						right: 0;
-					}
-					
-					.logo-wrap {
-						background-color: $white;
-						width: 212px;
-						height: 212px;
-						position: absolute;
-						bottom: -100px;
-						display: flex;
-						justify-content: center;
-						align-items: center;
-						
-						img {
-							max-width: 156px;
+					.banner-img-wrap {
+						position: relative;
+				
+						img.banner-emb-img {
+							position: absolute;
+							top: -1.625em;
+							right: -1.625em;
 						}
 						
-					}
+						.logo-wrap {
+							background-color: $white;
+							width: 150px;
+							height: 150px;
+							position: absolute;
+							bottom: -54px;
+							display: flex;
+							justify-content: center;
+							align-items: center;
+							padding: 1em;
+							
+							@include breakpoint(tablet) {
+								width: 212px;
+								height: 212px;	
+								padding: 1.75em;									}
+							
+						}
+											
+						img.banner-img {
+							
+							@include breakpoint(xlarge) {
+								max-width: 483px;
+							}
+						}
 					
+					}
+										
 				}
 				
 			}
@@ -91,6 +109,8 @@ header.article-header {
 		}
 		
 	}
+	
+}
 	
 &.style-home-page {
 	overflow: hidden;

@@ -96,21 +96,24 @@
 									<?php 
 									$image = get_sub_field('image');
 									if( !empty( $image ) ): ?>
+									<div class="banner-img-wrap">
 									    <img class="banner-img" src="<?php echo esc_url($image['url']); ?>" alt="<?php echo esc_attr($image['alt']); ?>" />
+									    
+										<img class="banner-emb-img" src="<?php echo get_template_directory_uri(); ?>/assets/images/banner-embellishment.svg" alt="banner embellishment"/>	
+										
+										<?php if( get_sub_field('add_logo') ):?>
+											<?php 
+											$image = get_sub_field('logo');
+											if( !empty( $image ) ): ?>
+											<div class="logo-wrap">
+											    <img class="banner-logo-img" src="<?php echo esc_url($image['url']); ?>" alt="<?php echo esc_attr($image['alt']); ?>" />
+											</div>
+											<?php endif; ?>									
+										<?php endif;?>
+																		    
+									</div>
 									<?php endif; ?>		
-									
-									<img class="banner-emb-img" src="<?php echo get_template_directory_uri(); ?>/assets/images/banner-embellishment.svg" alt="banner embellishment"/>	
-									
-									<?php if( get_sub_field('add_logo') ):?>
-										<?php 
-										$image = get_sub_field('logo');
-										if( !empty( $image ) ): ?>
-										<div class="logo-wrap">
-										    <img class="banner-logo-img" src="<?php echo esc_url($image['url']); ?>" alt="<?php echo esc_attr($image['alt']); ?>" />
-										</div>
-										<?php endif; ?>									
-									<?php endif;?>				
-								
+																	
 								</div>
 							</div>
 				
@@ -127,21 +130,23 @@
 	<?php elseif( $banner_style == 'just-title' ):?>
 	
 	<header class="article-header style-<?php echo $banner_style;?>">
-		<div class="grid-container">
-			<div class="grid-x grid-padding-x">	
-				<div class="cell">
-					<div class="top">
-
-						<?php if( $alt_heading = get_sub_field('alternative_heading') ):?>
-				
-							<h1 class="page-title"><?php echo $alt_heading; ?></h1>
-				
-						<?php else:?>
-						
-							<h1 class="page-title"><?php the_title(); ?></h1>
+		<div class="top">
+			<div class="grid-container">
+				<div class="grid-x grid-padding-x">	
+					<div class="cell">
+						<div class="top">
+	
+							<?php if( $alt_heading = get_sub_field('alternative_heading') ):?>
+					
+								<h1 class="page-title"><?php echo $alt_heading; ?></h1>
+					
+							<?php else:?>
 							
-						<?php endif;?>
-						
+								<h1 class="page-title"><?php the_title(); ?></h1>
+								
+							<?php endif;?>
+							
+						</div>
 					</div>
 				</div>
 			</div>

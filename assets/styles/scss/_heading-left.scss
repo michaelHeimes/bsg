@@ -1,0 +1,47 @@
+.heading-left-copy-right {
+	
+	.left {
+		
+	&.style-large {
+		
+		h2 {
+			margin-bottom: 0.75em;
+			
+			@include breakpoint(medium) {
+				margin-bottom: 1.2em;
+			}
+			
+			span {
+				position: relative;
+				z-index: 0;
+				font-size: rem-calc(69);
+				
+				@include breakpoint(medium) {
+					font-size: rem-calc(95);
+				}
+			
+		
+				img {
+					position: absolute;
+					z-index: -1;
+					bottom: -.2em;
+				    right: -.2em;
+				    max-width: 60px;
+					
+					@include breakpoint(medium) {
+					    bottom: -0.3em;
+					    right: -0.3em;
+					    max-width: 100%;
+				    }
+				    
+				}
+				
+			}
+		
+		}
+		
+	}
+		
+	}
+	
+}

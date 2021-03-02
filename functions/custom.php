@@ -50,7 +50,7 @@ function my_custom_styles( $init_array ) {
             'wrapper' => true,
         ),
         array(  
-            'title' => 'Small Caps',  
+            'title' => 'Bold Green Caps',  
             'inline' => 'span',  
             'classes' => 'small-caps',
             'wrapper' => true,

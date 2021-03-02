@@ -143,10 +143,10 @@ h2,
 .h2 {
 	span.back-slash:before {
 		width: calc(100% + 18px);
-		top: 9px;
+		top: 12px;
 		left: -9px;
 		right: -9px;
-		height: 10px;
+		height: 15px;
 		
 		@include breakpoint(medium) {
 			width: calc(100% + 26px);
@@ -162,16 +162,25 @@ h2,
 p,
 .copy-wrap,
 .text-wrap {
-	font-size: rem-calc(19);
+	font-size: rem-calc(17);
 	line-height: 1.94;
 	
 	span.large-green-text {
-		font-size: rem-calc(23);
+		font-size: rem-calc(19);
 		line-height: 1.782;
 		font-weight: 500;
 		color: $brand-dark-green;
 		display: inline-block;
 		padding-bottom: 0.65em;
+	}
+	
+	@include breakpoint(medium) {
+		font-size: rem-calc(19);
+		
+		span.large-green-text {
+			font-size: rem-calc(23);
+		}
+		
 	}
 	
 }

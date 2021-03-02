@@ -1,3 +1,5 @@
+<?php $num_posts = get_sub_field('number_of_post_to_show');?>
+
 <section class="recent-press module green-bg">
 	<div class="grid-container">
 		
@@ -11,7 +13,6 @@
 		</div>
 		
 			
-			<?php $num_posts = get_sub_field('number_of_post_to_show');?>
 			
 			<?php
 				
@@ -30,29 +31,42 @@
 					        
 						$counter = 0; while ( $loop->have_posts() ) : $loop->the_post();
 	                       if ($counter % 4 == 0 && $counter != 0): ?>
-	                      </div>
+	                      	</div>
 	                      </div>
 	                    <?php endif; ?>
 	                    <?php if ($counter % 4 == 0 or $counter == 0): ?>
 	                    <div>
-	                      <div class="press-wrap grid-x grid-padding-x small-up-1 medium-up-2">
+		                    
+							<div class="press-wrap grid-x grid-padding-x small-up-1 tablet-up-2">
 	                    <?php endif; ?>
 	                    
 	                      <?php get_template_part('parts/loop', 'press'); ?>
 	
 	                    <?php $counter++; endwhile; ?>        
-	                    </div>
+	                    	</div>
 	                    </div>
 					
 					    <?php wp_reset_postdata();?>
 					    
+					</div>
+					
+					<div class="slider-controls">
+						<button type="button" class="bg-slide-prev">
+							<img src="<?php echo get_template_directory_uri(); ?>/assets/images/arrow-left.svg" alt="arrow left"/>
+						</button>
+						
+						<div class="bg-slide-dots"></div>
+						
+						<button type="button" class="bg-slide-next">
+							<img src="<?php echo get_template_directory_uri(); ?>/assets/images/arrow-right.svg" alt="arrow right"/>
+						</button>
 					</div>
 						
 				<?php
 						
 				} else {?>
 				
-					<div class="press-wrap grid-x grid-padding-x small-up-1 medium-up-2">
+					<div class="press-wrap grid-x grid-padding-x small-up-1 tablet-up-2">
 
 					<?php
 						

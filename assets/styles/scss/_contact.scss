@@ -1,0 +1,44 @@
+.contact {
+	
+	.grid-x {
+		flex-direction: column-reverse;
+		
+		@include breakpoint(medium) {
+			flex-direction: row;
+		}
+		
+	}
+	
+	.left {
+		
+		.location-wrap {
+			padding-bottom: 3em;
+			
+			@include breakpoint(medium) {
+				padding-bottom: 6.2em;
+			}
+			
+		}
+		
+		a {
+			color: $black;
+			font-size: rem-calc(19);
+			line-height: 1.94;
+		}
+		
+		.location-wrap {
+			
+		}
+	
+	}
+	
+	.right {
+		padding-bottom: 2em;
+		
+		.copy-wrap {
+			padding-bottom: 3.35em;
+		}
+		
+	}
+	
+}

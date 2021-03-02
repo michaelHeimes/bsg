@@ -1,4 +1,5 @@
-.partners-module {
+.partners-module,
+.partner-rows {
 	
 	.img-wrap {
 		position: relative;
@@ -60,6 +61,83 @@
 	}
 	
 	.partners-wrap {
+		
+		.right {
+		
+			.col {
+				margin-bottom: 2em;
+		
+				.inner {
+					@include breakpoint(tablet) {
+						max-width: 380px;
+						margin: auto;
+					}					
+				}
+			
+			}
+			
+			.pipe {
+				margin-bottom: 1.2em;
+				
+				@include breakpoint(medium) {
+					margin-bottom: .75em;
+				}
+			}
+			
+			h3 {
+				margin-bottom: .42em;
+			}
+		
+		}
+		
+	}
+	
+&.presskit {
+	.img-wrap .card-wrap .inner {
+		
+		h2 {
+			margin-bottom: 0;
+		}
+		
+		.items-wrap {
+			padding-top: .45em;
+			margin-bottom: -8px;
+			
+			.single-item {
+				margin-top: 2em;
+				
+				.left {
+					padding-right: 0;
+				}
+				
+				.right {
+					h3 {
+						font-family: $font-body;
+						font-size: rem-calc(23);
+						color: $brand-dark-green;
+						font-weight: 500;
+						margin-bottom: 0;
+					}
+					
+					p {
+						font-size: rem-calc(15);
+						margin: 0;
+					}
+					
+				}
+				
+			}
+			
+		}
+		
+	}
+}
+		
+}
+
+.partners-module {
+	
+	.partners-wrap {
 		padding-top: 1.6em;
 		padding-bottom: 1.6em;
 		
@@ -73,46 +151,33 @@
 			padding-bottom: 5.6em;
 		}
 		
+		
 		img {
 			margin-top: 10px;
 			max-width: 156px;
 			margin-bottom: 2em;
-			
-			@include breakpoint(medium) {
-				margin-bottom: 0;
-			}
-			
-		}
 		
-		.right {
-		
-			.col {
-				margin-bottom: 2em;
-		
-				.inner {
-					@include breakpoint(tablet) {
-						max-width: 380px;
-						margin: auto;
-					}
-					
-					.pipe {
-						margin-bottom: 1.2em;
-						
-						@include breakpoint(medium) {
-							margin-bottom: .75em;
-						}
-					}
-					
-					h3 {
-						margin-bottom: .42em;
-					}
-					
-				}
-			
-			}
+		@include breakpoint(medium) {
+			margin-bottom: 0;
+		}					
 		
 		}
 		
 	}
 	
+}
+
+.partner-rows {
+	.single-row {
+		padding-bottom: 3em;
+		
+		@include breakpoint(medium) {
+			padding-bottom: 5.7em;
+		}
+		
+		.left {
+			margin-bottom: 2em;
+		}
+		
+	}
 }

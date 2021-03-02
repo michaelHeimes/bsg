@@ -1,4 +1,6 @@
 header.header {
+	position: relative;
+	z-index: 55555;
 	padding-top: .75em;
 	padding-bottom: .7em;
 	background-color: $brand-green;
@@ -183,6 +185,15 @@ ul#offcanvas-nav {
 		}
 		
 	}
+}
+
+.accordion-menu .is-accordion-submenu-parent>a:after {
+	transition: .4s ease;
+}
+
+.accordion-menu .is-accordion-submenu-parent[aria-expanded=true]>a:after {
+    transform: rotateX(180deg);
+    transform-origin: 50% 100%;
 }
 
 

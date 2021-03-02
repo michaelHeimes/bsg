@@ -22,7 +22,7 @@
 			
 			<div class="right cell small-12 medium-8 tablet-7 tablet-offset-1">
 				<div class="copy-wrap">
-					<?php the_sub_field('copy');?>
+					<span class="large-green-text"><?php the_sub_field('copy');?></span>
 				</div>
 				
 				<h2>Get In Touch</h2>

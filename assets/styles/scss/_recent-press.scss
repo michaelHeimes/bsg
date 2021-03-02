@@ -7,6 +7,7 @@
 	}
 	
 	.press-wrap {
+		min-width: 100%;
 		padding-top: 2em;
 		padding-bottom: 2.25em;
 		
@@ -30,17 +31,95 @@
 			}
 			
 		}
-		
+				
+	}
+	
+	.slider-controls {
+			display: flex;
+		    justify-content: center;
+		    align-items: center;
+		    
+		    @include breakpoint(tablet) {
+		    	padding-top: 2.1em;
+		    	padding-bottom: 1.35em;
+			}
+		    
+		.slick-arrow {
+			min-height: 25px;
+			min-width: 25px;
+			transition: .4s ease;
+			
+			@include breakpoint(tablet) {
+				min-height: 36px;
+				min-width: 36px;
+			}
+			
+		&.slick-disabled {
+			opacity: .3;
+		}
+			
+		}
+	
 		ul.slick-dots {
 			position: relative;
 			display: flex;
 		    justify-content: center;
-		    margin: 0;
+		    margin: 0 0.5em;
 		    padding: 0;
 		    list-style: none;
+		    
+		    @include breakpoint(medium) {
+			    margin: 0 1.6em;
+		    }
 		
 			li {
-				margin: 0 1em;
+				position: relative;
+				margin: 0 .5em;
+				
+				@include breakpoint(medium) {
+					margin: 0 .88em;
+				}
+
+				
+				button {
+					min-height: 25px;
+					min-width: 25px;
+					color: $white;
+					text-align: center;
+					font-size: rem-calc(17);
+					font-weight: 600;
+					
+					@include breakpoint(tablet) {
+						min-height: 36px;
+						min-width: 36px;						
+					}
+					
+					&:after {
+						content: '';
+						position: absolute;
+						left: 0;
+						right: 0;
+						bottom: 0;
+						margin: auto;
+						width: 0;
+						height: 2px;
+						background-color: $white;
+						transition: .4s ease;
+					}					
+				}
+				
+
+				
+			&.slick-active {
+				
+				button {
+					&:after {
+						width: 16px;
+					}
+				}
+				
+			}
+			
 			}
 			
 		}
