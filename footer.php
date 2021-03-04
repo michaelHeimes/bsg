@@ -77,8 +77,8 @@
 								
 									<div class="left cell small-12 medium-4 tablet-shrink">
 										<div class="inner">
-											<a href="<?php the_field('twitter_url');?>"><img src="<?php echo get_template_directory_uri(); ?>/assets/images/icon-twitter-footer.svg" alt="Twitter Logo"/></a>
-											<a href="<?php the_field('linkedin_url');?>"><img src="<?php echo get_template_directory_uri(); ?>/assets/images/icon-linkedin-footer.svg" alt="LinkedIn Logo"/></a>
+											<a href="<?php the_field('twitter_url', 'option');?>"><img src="<?php echo get_template_directory_uri(); ?>/assets/images/icon-twitter-footer.svg" alt="Twitter Logo"/></a>
+											<a href="<?php the_field('linkedin_url', 'option');?>"><img src="<?php echo get_template_directory_uri(); ?>/assets/images/icon-linkedin-footer.svg" alt="LinkedIn Logo"/></a>
 										</div>
 									</div>
 									

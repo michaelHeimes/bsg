@@ -7,7 +7,7 @@
 		if( !empty( $image ) ): ?>
 		<div class="img-wrap text-center">
 		    <img src="<?php echo esc_url($image['url']); ?>" alt="<?php echo esc_attr($image['alt']); ?>" />
-		    
+		    		    
 			<div class="card-wrap grid-container">
 				<div class="grid-x grid-padding-x align-center">
 										
@@ -16,8 +16,42 @@
 						<p><span class="large-green-text"><?php the_sub_field('copy');?></span></p>
 					</div>
 					
+					<div class="squares-wrap cell hide-for-tablet">
+						
+						<?php 
+						$link = get_sub_field('arrow_box_link');
+						if( $link ): 
+						    $link_url = $link['url'];
+						    $link_title = $link['title'];
+						    $link_target = $link['target'] ? $link['target'] : '_self';
+						    ?>
+						    <a href="<?php echo esc_url( $link_url ); ?>" target="<?php echo esc_attr( $link_target ); ?>">
+							    <img src="<?php echo get_template_directory_uri(); ?>/assets/images/arrow-boxes.svg" alt="arrow boxes"/>
+							</a>
+						    
+						<?php else:?>
+							<img src="<?php echo get_template_directory_uri(); ?>/assets/images/arrow-boxes.svg" alt="arrow boxes"/>
+						<?php endif; ?>
+						
+					</div>
+					
 					<div class="squares-wrap cell show-for-tablet">
-						<img src="<?php echo get_template_directory_uri(); ?>/assets/images/arrow-boxes.svg" alt="arrow boxes"/>
+						
+						<?php 
+						$link = get_sub_field('arrow_box_link');
+						if( $link ): 
+						    $link_url = $link['url'];
+						    $link_title = $link['title'];
+						    $link_target = $link['target'] ? $link['target'] : '_self';
+						    ?>
+						    <a href="<?php echo esc_url( $link_url ); ?>" target="<?php echo esc_attr( $link_target ); ?>">
+							    <img src="<?php echo get_template_directory_uri(); ?>/assets/images/arrow-boxes.svg" alt="arrow boxes"/>
+							</a>
+						    
+						<?php else:?>
+							<img src="<?php echo get_template_directory_uri(); ?>/assets/images/arrow-boxes.svg" alt="arrow boxes"/>
+						<?php endif; ?>
+						
 					</div>					
 					
 				</div>

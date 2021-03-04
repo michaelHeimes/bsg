@@ -61,19 +61,25 @@ header.header {
 
 	.dropdown.menu.medium-horizontal {
 		align-items: center;
+		justify-content: flex-end;
 		
 		> li.outlined {
 			border: 2px solid $white;
 			
 			a {
-				padding: 0.625em 2.208em;
+				padding: 0.625em 1.5em;
+				
+				@include breakpoint(xlarge) {
+					padding: 0.625em 2.208em;
+				}
+				
 			}
 			
 		}
 		
 		li {
 			text-align: center;
-			max-width: 140px;
+
 			a {
 				color: $white;
 				font-weight: 600;
@@ -89,7 +95,12 @@ header.header {
 		}
 		
 		&:not(:last-child) {
-			margin-right: 1.92em;
+			margin-right: 1.25em;
+			
+			@include breakpoint(xlarge) {
+				margin-right: 1.92em;
+			}
+			
 		}
 		
 			ul.submenu {

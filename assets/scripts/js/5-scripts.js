@@ -1,6 +1,10 @@
 (function($) {
 	'use strict';
 	
+	$('.menu a[href="#"]').click(function(e) {
+		e.preventDefault ? e.preventDefault() : e.returnValue = false;
+	});	
+	
 	$(document).on('click', 'a#menu-toggle', function(){
 		$('header').addClass('off-canvas-content is-open-right has-transition-push');
 	});
@@ -24,5 +28,13 @@
 		});
 	
 	}
+	
+	$(window).on("load resize", function() {
+		var $matchedWidth = $('.inner-footer .right').outerWidth();
+		$('.inner-footer .bottom .right').css('min-width', $matchedWidth);
+	});
+	
+	
+	
 	
 })(jQuery);

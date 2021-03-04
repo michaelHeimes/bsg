@@ -47,12 +47,22 @@
 			}
 			
 			.squares-wrap {
-				
+								
 				img {
 					position: absolute;
 					bottom: -19px;
 					right: -50px;					
 				}
+				
+			&.hide-for-tablet {
+				position: absolute;
+				img {
+					max-width: 52px;
+				    position: relative;
+				    top: -44px;
+				    left: 100px;
+				}
+			}
 				
 			}
 			
@@ -136,7 +146,7 @@
 }
 
 .partners-module {
-	
+
 	.partners-wrap {
 		padding-top: 1.6em;
 		padding-bottom: 1.6em;
@@ -162,6 +172,7 @@
 		}					
 		
 		}
+		
 		
 	}
 	

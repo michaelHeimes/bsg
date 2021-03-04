@@ -8,7 +8,21 @@
 				<img src="<?php echo get_template_directory_uri(); ?>/assets/images/press-embelleshment.svg" alt="press embelleshment"/>
 			</div>
 			<div class="cell auto">
-				<h2>Recent Press</h2>
+				<?php
+					
+					if ( $num_posts == 'all' ) {?>
+						<h2>Recent Press</h2>
+						
+					<?php
+						
+					} else {?>
+				
+						<h2><a href="<?php the_field('press_page_link', 'option');?>">Recent Press</a></h2>
+						
+				    <?php }
+				    
+				;?>
+			
 			</div>
 		</div>
 		

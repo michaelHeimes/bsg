@@ -21,7 +21,17 @@
 		
 		</div>
 		
-		<h2><a class="underlined" href="<?php the_field('article_pdf');?>" target="_blank"><?php the_field('article_title');?></a></h2>
+		<?php if( $article_link =  get_field('article_link') ):?>
+
+			<h2><a class="underlined" href="<?php echo $article_link;?>" target="_blank"><?php the_field('article_title');?></a></h2>
+		
+		<?php endif;?>
+		
+		<?php if( $article_pdf =  get_field('article_pdf') ):?>
+
+			<h2><a class="underlined" href="<?php echo $article_pdf;?>" target="_blank"><?php the_field('article_title');?></a></h2>
+		
+		<?php endif;?>
     
 	</div>			            
 </article>
