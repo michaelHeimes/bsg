@@ -103,8 +103,6 @@
 			    <?php }
 			    
 			;?>
-					
-		</div>
-		
+							
 	</div>
 </section>

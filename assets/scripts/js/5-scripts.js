@@ -6,11 +6,12 @@
 	});	
 	
 	$(document).on('click', 'a#menu-toggle', function(){
-		$('header').addClass('off-canvas-content is-open-right has-transition-push');
+		$('header.header').addClass('off-canvas-content is-open-right has-transition-push');
 	});
 
 	$(document).on('click', '.js-off-canvas-overlay', function(){
-		$('header').removeClass('off-canvas-content is-open-right has-transition-push');
+		$('header.header').removeClass('off-canvas-content is-open-right has-transition-push');
+		console.log("loaded");
 	});
 	
 	if( $('.press-slider').length ) {

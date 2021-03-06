@@ -20,6 +20,15 @@ footer.footer {
 					font-weight: bold;
 					line-height: 1.85;
 				}
+				
+				a {
+					transition: color .2s ease;
+				
+				&:hover {
+					color: $brand-lime-green;	
+				}
+				
+				}
 			
 			}
 		
@@ -60,6 +69,11 @@ footer.footer {
 					a {
 						font-size: rem-calc(15);
 						font-weight: 500;
+						
+						&:hover {
+							color: $brand-lime-green;
+						}
+						
 					}
 					
 				&:last-child {
@@ -101,6 +115,12 @@ footer.footer {
 					align-items: center;
 					justify-content: center;
 					margin-right: 10px;
+					transition: background-color .2s ease;
+					
+					&:hover {
+						background-color: $white;
+					}
+					
 				}
 			
 			}
@@ -109,6 +129,10 @@ footer.footer {
 		
 		.right {
 			margin-bottom: 2em;
+			
+			a:hover {
+				color: $white;
+			}
 			
 			.source-org {
 				padding-top: 1em;

@@ -12,9 +12,14 @@
 	.left {
 		
 		.location-wrap {
+			padding-top: 3em;
 			padding-bottom: 3em;
 			
 			@include breakpoint(medium) {
+				padding-top: 0;
+			}
+			
+			@include breakpoint(tablet) {
 				padding-bottom: 6.2em;
 			}
 			

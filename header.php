@@ -27,6 +27,8 @@
 			<link rel="icon" href="<?php echo get_template_directory_uri(); ?>/favicon.png">
 			<link href="<?php echo get_template_directory_uri(); ?>/assets/images/apple-icon-touch.png" rel="apple-touch-icon" />	
 	    <?php } ?>
+	    
+	    <link rel="preconnect" href="https://fonts.gstatic.com/">
 
 		<link rel="pingback" href="<?php bloginfo('pingback_url'); ?>">
 		
@@ -38,7 +40,7 @@
 	</head>
 			
 	<body <?php body_class(); ?>>
-		
+				
 		<header class="header banner-style-<?php the_field('banner_style');?>" role="banner" data-sticky data-margin-top="0" data-sticky-on="small">
 			
 			<div class="grid-container fluid">

@@ -66,6 +66,11 @@ header.header {
 		> li.outlined {
 			border: 2px solid $white;
 			
+		&:hover {
+			border: 2px solid $brand-lime-green;
+			transition: border-color .2s ease;
+		}
+			
 			a {
 				padding: 0.625em 1.5em;
 				
@@ -84,6 +89,12 @@ header.header {
 				color: $white;
 				font-weight: 600;
 				line-height: 1.25;
+				transition: color .2s ease;
+				
+			&:hover {
+				color: $brand-lime-green;
+			}
+				
 			}
 			
 		&.is-dropdown-submenu-parent>a:after {
@@ -121,6 +132,11 @@ header.header {
 					a {
 						padding: .3em 1.5em;
 						color: $brand-dark-green;
+						
+					&:hover {
+						color: $brand-dark-green;
+					}
+						
 					}
 					
 				&.active,
@@ -145,11 +161,21 @@ header.header {
 		
 		> li.outlined {
 			border: 2px solid $brand-dark-green;
+			
+			&:hover {
+				border: 2px solid $brand-green;
+			}
+			
 		}
 		
 		li {
 			a {
 				color: $brand-dark-green;
+				
+			&:hover {
+				color: $brand-green;
+			}
+				
 			}
 			
 		&.is-dropdown-submenu-parent>a:after {

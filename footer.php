@@ -42,7 +42,11 @@
 								<div class="contact-wrap grid-x grid-padding-x">
 									<div class="cell shrink">
 										<div class="contact-label">Location</div>
-										<div><?php the_field('location', 'option');?></div>
+										<div>
+											<a href="<?php the_field('google_maps_link', 'option');?>" target="_blank">
+												<?php the_field('location', 'option');?>
+											</a>
+										</div>
 									</div>
 	
 									<div class="cell shrink">

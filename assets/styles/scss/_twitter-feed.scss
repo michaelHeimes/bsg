@@ -9,4 +9,31 @@
 		
 	}
 	
+	.right {
+		
+		.inner {
+			display: flex;
+			align-items: flex-start;
+			
+			a {
+				text-decoration: underline;
+			}
+			
+			#ctf a.ctf-author-name {
+				font-weight: 500 !important;
+			}
+			
+			p.ctf-tweet-text a {
+				color: #e4581d;
+			}
+			
+			img.twitter-logo {
+				margin-left: 30px;
+				margin-top: 120px;
+			}
+		
+		}
+		
+	}
+	
 }

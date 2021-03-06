@@ -10,7 +10,7 @@
 		left: 0;
 		right: 0;
 		bottom: 0;
-		background-position: 50% 50%;
+		background-position: 50% 0%;
 		background-repeat: no-repeat;
 	}
 	
@@ -20,7 +20,59 @@
 	
 		h2 {
 			color: $white;
-		}		
+			margin-bottom: .25em;
+		}	
+		
+		.form-wrap {
+			max-width: 360px;
+			
+			[type=color],
+			[type=date],
+			[type=datetime-local],
+			[type=datetime],
+			[type=email],
+			[type=month],
+			[type=number],
+			[type=password],
+			[type=search],
+			[type=tel],
+			[type=text],
+			[type=time],
+			[type=url],
+			[type=week],
+			textarea {
+				background-color: transparent;
+				border: 1px solid $white;
+				box-shadow: 0 0 0;
+				font-size: rem-calc(15);
+				height: 40px;
+				padding: .4em 0.65rem;
+				margin-bottom: 1.4em;
+				
+				&::placeholder {
+					font-size: rem-calc(15);
+					font-weight: 500;
+				}
+				
+			}
+			
+			input#mc-embedded-subscribe {
+				width: 100%;
+				background-color: $white;
+				font-weight: 600;
+				color: $brand-dark-green;
+				height: 55px;
+				margin-top: .48em;
+				transition: all .2s ease;
+				
+			&:hover {
+				background-color: $brand-green;
+				color: $white;
+			}
+				
+			}
+			
+		}	
 	
 	}
 	

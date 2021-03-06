@@ -61,6 +61,12 @@ function my_custom_styles( $init_array ) {
             'classes' => 'large-green-text',
             'wrapper' => true,
         ),
+        array(  
+            'title' => 'Unbroken Link',  
+            'inline' => 'span',  
+            'classes' => 'unbroken-link',
+            'wrapper' => true,
+        ),
     );  
     // Insert the array, JSON ENCODED, into 'style_formats'
     $init_array['style_formats'] = json_encode( $style_formats );  
