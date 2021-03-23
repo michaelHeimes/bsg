@@ -1,4 +1,7 @@
-<?php $num_posts = get_sub_field('number_of_post_to_show');?>
+<?php
+	$num_posts = get_sub_field('number_of_post_to_show');
+	$press_cat = get_sub_field('category_to_show');
+?>
 
 <section class="recent-press module green-bg">
 	<div class="grid-container">
@@ -35,11 +38,33 @@
 					<div class="press-slider">
 					
 						<?php
-					    $args = array(  
-					        'post_type' => 'press_post',
-					        'post_status' => 'publish',
-					        'posts_per_page' => -1, 
-					    );
+							
+						if ( $press_cat != false) {
+							
+						    $args = array(  
+						        'post_type' => 'press_post',
+						        'post_status' => 'publish',
+						        'posts_per_page' => -1, 
+						        	
+								'tax_query' => array(
+								    array(
+								    'taxonomy' => 'press_tax',
+								    'field' => 'term_id',
+								    'terms' => $press_cat
+								     )
+								)						        
+						        
+						    );
+					    
+					    } else {
+						    
+						    $args = array(  
+						        'post_type' => 'press_post',
+						        'post_status' => 'publish',
+						        'posts_per_page' => -1, 					        
+						    );						 
+						    
+					    }
 					
 					    $loop = new WP_Query( $args ); 
 					        
@@ -83,12 +108,31 @@
 					<div class="press-wrap grid-x grid-padding-x small-up-1 tablet-up-2">
 
 					<?php
+													
+					if ( $press_cat != false) {
 						
-				    $args = array(  
-				        'post_type' => 'press_post',
-				        'post_status' => 'publish',
-				        'posts_per_page' => $num_posts, 
-				    );
+					    $args = array(  
+					        'post_type' => 'press_post',
+					        'post_status' => 'publish',
+					        'posts_per_page' => $num_posts, 
+							'tax_query' => array(
+							    array(
+							    'taxonomy' => 'press_tax',
+							    'field' => 'term_id',
+							    'terms' => $press_cat
+							     )
+							)						    					        
+					    );
+					    
+					} else {
+						
+					    $args = array(  
+					        'post_type' => 'press_post',
+					        'post_status' => 'publish',
+					        'posts_per_page' => $num_posts, 
+					    );						
+						
+					}
 				
 				    $loop = new WP_Query( $args ); 
 				        

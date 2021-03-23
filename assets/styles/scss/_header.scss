@@ -65,10 +65,18 @@ header.header {
 		
 		> li.outlined {
 			border: 2px solid $white;
+			background-color: transparent;
+			transition: all.2s ease;
 			
 		&:hover {
-			border: 2px solid $brand-lime-green;
-			transition: border-color .2s ease;
+			border: 2px solid $white;
+			background-color: $white;
+			
+			a {
+				text-decoration: none;
+				color: $brand-green;
+			}
+			
 		}
 			
 			a {
@@ -163,7 +171,14 @@ header.header {
 			border: 2px solid $brand-dark-green;
 			
 			&:hover {
-				border: 2px solid $brand-green;
+				background-color: $brand-dark-green;
+				border: 2px solid $brand-dark-green;
+				
+				a {
+					text-decoration: none;
+					color: $white;
+				}
+				
 			}
 			
 		}

@@ -1,6 +1,6 @@
 <?php $modal = get_row_index();?>
 
-<section class="video" data-open="modal-<?php echo $modal;?>">
+<section class="video text-center" data-open="modal-<?php echo $modal;?>">
 	<?php 
 	$image = get_sub_field('placeholder_image');
 	$size = 'full'; // (thumbnail, medium, large, full or custom size)

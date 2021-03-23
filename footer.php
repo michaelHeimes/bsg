@@ -43,16 +43,26 @@
 									<div class="cell shrink">
 										<div class="contact-label">Location</div>
 										<div>
-											<a href="<?php the_field('google_maps_link', 'option');?>" target="_blank">
-												<?php the_field('location', 'option');?>
-											</a>
+											<?php the_field('location', 'option');?>
 										</div>
+										
+											<?php 
+											$link = get_field('google_maps_link', 'option');
+											if( $link ): 
+											    $link_url = $link['url'];
+											    $link_title = $link['title'];
+											    $link_target = $link['target'] ? $link['target'] : '_self';
+											    ?>
+											<div>
+											    <a href="<?php echo esc_url( $link_url ); ?>" target="<?php echo esc_attr( $link_target ); ?>"><?php echo esc_html( $link_title ); ?></a>
+											</div>
+											<?php endif; ?>											
 									</div>
 	
 									<div class="cell shrink">
 										<div class="contact-label">Contact</div>
-										<div><a href="mailto:<?php the_field('phone_number', 'option');?>"><?php the_field('phone_number', 'option');?></a></div>
-										<div><a href="tel:<?php the_field('email', 'option');?>"><?php the_field('email', 'option');?></a></div>
+										<div><?php the_field('phone_number', 'option');?></div>
+										<div><a href="mailto:<?php the_field('email', 'option');?>"><?php the_field('email', 'option');?></a></div>
 									</div>
 								</div>
 								
@@ -99,7 +109,7 @@
 											    <a class="underlined" href="<?php echo esc_url( $link_url ); ?>" target="<?php echo esc_attr( $link_target ); ?>"><?php echo esc_html( $link_title ); ?></a>
 											</div>
 											<?php endif; ?>
-											<div class="source-org copyright cell small-12 medium-auto">&copy; Copyright <?php echo date('Y'); ?> <?php bloginfo('name'); ?> | <a href="https://proprdesign.com/" target="_blank">Made by Propr Design</a></div>
+											<div class="source-org copyright cell small-12 medium-auto">&copy; Copyright <?php echo date('Y'); ?> <?php bloginfo('name'); ?> | <a class="underlined" href="https://proprdesign.com/" target="_blank">Made by Propr Design</a></div>
 										</div>
 									</div>
 								

@@ -24,10 +24,28 @@
 				font-size: rem-calc(15);
 				font-weight: 500;
 				padding-bottom: 1.5em;
+				transition: all 0.25s ease;
+				
+				a:hover {
+					color: $brand-dark-green;
+					text-decoration: none;
+				}
+				
 			}
 			
 			h2 {
 				line-height: 1.475;
+				
+				a {
+					transition: all 0.25s ease;
+					
+					&:hover {
+						color: $brand-dark-green;
+						text-decoration: none;
+					}
+					
+				}
+				
 			}
 			
 		}
