@@ -27,6 +27,13 @@
 		    prevArrow: $(".bg-slide-prev"),
 		    nextArrow: $(".bg-slide-next")
 		});
+		
+		
+		if( $('.press-slider .slick-slide').length == 1 ) {
+			$('.bg-slide-dots').hide();
+		}
+		
+		
 	
 	}
 	
